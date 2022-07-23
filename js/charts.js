@@ -86,7 +86,7 @@ function buildCharts(sample) {
       text: labels
     }];
       
-    // 9. Create the layout for the bar chart. 
+    // 9. Create the layout(s) for the bar chart. 
     var barLayout = {
       title: "Top 10 Bacteria Cultures Found"
     };
