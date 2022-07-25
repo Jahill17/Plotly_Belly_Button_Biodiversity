@@ -1,37 +1,43 @@
-// Sort the data array using the greekSearchResults value
-data.sort(function(a, b) {
-  return parseFloat(b.greekSearchResults) - parseFloat(a.greekSearchResults);
-});
+// Take the ID number and provide as dropdown menu options with init func
+function init() {
+  var selector = d3.select("#selDataset");
 
-// Slice the first 10 objects for plotting
-data = data.slice(0, 10);
+  d3.json("samples.json").then((data) => {
+    console.log(data);
+    var sampleNames = data.names;
+    sampleNames.forEach((sample) => {
+      selector
+        .append("option")
+        .text(sample)
+        .property("value", sample);
+    });
+})}
 
-// Reverse the array due to Plotly's defaults
-data = data.reverse();
+init();
 
-// Trace1 for the Greek Data
-var trace1 = {
-  x: data.map(row => row.greekSearchResults),
-  y: data.map(row => row.greekName),
-  text: data.map(row => row.greekName),
-  name: "Greek",
-  type: "bar",
-  orientation: "h"
-};
+// call the option change function with html
+function optionChanged(newSample) {
+  console.log(newSample);
+  buildMetadata(newSample);
+  buildCharts(newSample);
+}
 
-// data
-var data = [trace1];
+// Metadata function within html.  Set array equal to [0] since results are returned in array
+function buildMetadata(sample) {
+  d3.json("samples.json").then((data) => {
+    var metadata = data.metadata;
+    var resultsArray = metadata.filter(sampleObj => sampleObj.id == sample);
+    var result = resultsArray[0];
+    var PANEL = d3.select("#sample-metadata");
 
-// Apply the group bar mode to the layout
-var layout = {
-  title: "Greek gods search results",
-  margin: {
-    l: 100,
-    r: 100,
-    t: 100,
-    b: 100
-  }
-};
-
-// Render the plot to the div tag with id "plot"
-Plotly.newPlot("plot", data, layout);
+    //Before another ID gets call, must clear current content
+    PANEL.html(""); 
+    PANEL.append("h6").text(`ID: ${result.id}`);
+    PANEL.append("h6").text(`Ethnicity: ${result.ethnicity}`);
+    PANEL.append("h6").text(`Gender: ${result.gender}`);
+    PANEL.append("h6").text(`Age: ${result.age}`);
+    PANEL.append("h6").text(`Location: ${result.location}`);
+    PANEL.append("h6").text(`BBtype: ${result.bbtype}`);
+    PANEL.append("h6").text(`Washing/week: ${result.wfreq}`);
+  });
+}
