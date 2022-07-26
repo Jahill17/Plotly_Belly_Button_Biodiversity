@@ -5,28 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Belly Button Biodiversity</title>
-  <link 
-    rel="stylesheet" 
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link 
-  rel ="stylesheet" 
-  href="static/css/style.css">
+  <title>Plotly Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
 
   <div class="container">
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Plotly Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+    <div class="row bg-dark">
+      <div class="col-md-12 jumbotron text-center white-text" style="background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/09/06/12/e-coli-explainer-main.jpg?quality=75&width=990&auto=webp&crop=982:726,smart)">
+        <h1 class="white-text">Plotly Belly Button Biodiversity Dashboard</h1>
+        <p class="white-text">Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
-    
     <div class="row">
-      <div class="col-md-2">
-          <div class="well">
+      <div class="col-md-12 text-center white-text">
+        <h2 class="white-text">Project Overview</h2>
+        <p class="rgb-text"></p>
+      </div>
+    </div>
+    <div class="row bg-dark">
+      <div class="col-md-2 bg-dark">
+        <div class="well bg-dark">
           <h5>Test Subject ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
@@ -34,28 +35,26 @@
           <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
-          <div id="sample-metadata" class="panel-body"></div>
+          <div id="sample-metadata" class="panel-body bg-dark"></div>
         </div>
       </div>
-      
-      <div class="col-md-5">
+      <div class="col-md-5 bg-dark">
         <div id="bar"></div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 bg-dark">
         <div id="gauge"></div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 bg-dark">
         <div id="bubble"></div>
       </div>
     </div>
-  </div>
+    </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="./JS/charts.js"></script>
-
+  <script src="js/charts.js"></script>
 
 </body>
 
