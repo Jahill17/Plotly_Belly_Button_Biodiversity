@@ -12,9 +12,10 @@ The ultimate goal is to create an interactive dashboard to display bacteria that
 - Deliverable 4: Customize the Dashboard
 
 ## Resources
-- JavaScript
-- Plotly
-- HTML/CSS
-- samples.json (primary data source file)
+- JavaScript [charts.js]([js/charts.js](https://github.com/Jahill17/Plotly_Belly_Button_Biodiversity/blob/b661d2a269056324b3303a65f65dfe2f4b6c1479/js/charts.js)
+- Plotly [Plots.js ](https://github.com/Jahill17/Plotly_Belly_Button_Biodiversity/blob/b661d2a269056324b3303a65f65dfe2f4b6c1479/plots.js)
+- HTML [Index.html](https://github.com/Jahill17/Plotly_Belly_Button_Biodiversity/blob/b661d2a269056324b3303a65f65dfe2f4b6c1479/index.html)
+- CSS [style.css](https://github.com/Jahill17/Plotly_Belly_Button_Biodiversity/blob/b661d2a269056324b3303a65f65dfe2f4b6c1479/css/style.css)
+- json [samples.json ](https://github.com/Jahill17/Plotly_Belly_Button_Biodiversity/blob/b661d2a269056324b3303a65f65dfe2f4b6c1479/samples.json)
 
 ## Results
