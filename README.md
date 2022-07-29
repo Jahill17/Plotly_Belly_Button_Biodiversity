@@ -20,4 +20,4 @@ The ultimate goal is to create an interactive dashboard to display bacteria that
 - json [samples.json ](https://github.com/Jahill17/Plotly_Belly_Button_Biodiversity/blob/b661d2a269056324b3303a65f65dfe2f4b6c1479/samples.json)
 
 ## Results
-![image](https://user-images.githubusercontent.com/104641021/180901353-bc689887-6630-4e45-bcde-13a14aaad6d5.png)
+![image](https://github.com/Jahill17/Plotly_Belly_Button_Biodiversity/blob/498bb4564ce3a317ab592be055d9b4b083e1d89e/images/Plotly_Main_Dashboard.png)
