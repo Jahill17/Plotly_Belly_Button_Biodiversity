@@ -67,8 +67,8 @@ function buildCharts(sample) {
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var otuids = result.otu_ids;
-    var otulabels = result.otu_labels.slice(0, 10).reverse();
-    var samplevalues = result.sample_values.slice(0,10).reverse();
+    var otulabels = result.otu_labels;
+    var samplevalues = result.sample_values;
     
     // variable will filter the metadata array
     var metadata = data.metadata;
@@ -86,7 +86,7 @@ function buildCharts(sample) {
 
     var yticks = otuids.slice(0,10).reverse().map(function (elem) {return `OTU ${elem}`});
     var xticks = samplevalues.slice(0,10).reverse();
-    var labels = otulabels.slice(0,10).reverse();
+    var labels = otulabels.slice(0, 10).reverse();
 
     // 8. Create the trace for the bar chart. 
     var barData = [{
@@ -103,7 +103,7 @@ function buildCharts(sample) {
     };
 
     // 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot("bar", [barData], barLayout);
+    Plotly.newPlot("bar", barData, barLayout);
 
 
 // DELIVERABLE 2 Requirements
